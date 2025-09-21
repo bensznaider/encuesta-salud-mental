@@ -2,7 +2,7 @@ export const api = {
   guardarRespuesta(payload) {
     return new Promise((resolve, reject) => {
       if (!(window.google && google.script && google.script.run)) {
-        // fallback extra (in addition to the one in main.jsx)
+        // Extra fallback (in addition to the one in main.jsx)
         console.log('[API Fallback] guardarRespuesta', payload)
         return resolve({ ok: true })
       }

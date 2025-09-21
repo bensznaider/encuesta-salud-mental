@@ -9,7 +9,7 @@ export default function App() {
     apellido: "",
     nombre: "",
     dni: "",
-    contactoPersonal: "",
+    telefono: "",
     //BASIC IS PHQ2 + GAD2, MERGED INTO ONE ARRAY SO THAT BOTH APPEAR IN THE SAME SECTION
     basic: [null, null, null, null],
     phq9: [null, null, null, null, null, null, null, null, null],
@@ -190,6 +190,9 @@ export default function App() {
           gad7Enabled={gad7Enabled}
         />
       )}
+      {/* Replace the following <div> for the real one before npm run build
+      and don't commit the change to the public repo, so that the version
+      for the portfolio remains a mock from the original in Apps Script */}
       <div
         style={{
           padding: "1rem 1.5rem",

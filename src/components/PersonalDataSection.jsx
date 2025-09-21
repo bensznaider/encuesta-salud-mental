@@ -13,7 +13,7 @@ export default function PersonalDataSection({
       form.apellido,
       form.nombre,
       form.dni,
-      form.contactoPersonal,
+      form.telefono,
     ].every((field) => field.trim().length > 0);
     setContinueEnabled(allFilled);
   }, [form]);
@@ -37,10 +37,10 @@ export default function PersonalDataSection({
         onChange={(e) => setForm((f) => ({ ...f, dni: e.target.value }))}
       />
       <InputQuestionCard
-        label="Contacto personal"
-        value={form.contactoPersonal}
+        label="Teléfono"
+        value={form.telefono}
         onChange={(e) =>
-          setForm((f) => ({ ...f, contactoPersonal: e.target.value }))
+          setForm((f) => ({ ...f, telefono: e.target.value }))
         }
       />
 
@@ -62,7 +62,7 @@ export default function PersonalDataSection({
               apellido: "",
               nombre: "",
               dni: "",
-              contactoPersonal: "",
+              telefono: "",
             }))
           }
         >

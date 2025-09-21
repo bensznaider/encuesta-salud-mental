@@ -40,7 +40,7 @@ export default function QuestionsSection({
         apellido: form.apellido?.trim() ?? "",
         nombre: form.nombre?.trim() ?? "",
         dni: form.dni?.trim() ?? "",
-        contacto: form.contactoPersonal?.trim() ?? "",
+        telefono: form.telefono?.trim() ?? "",
         fecha: new Date().toISOString(),
         phq2: (form.basic[0] ?? 0) + (form.basic[1] ?? 0),
         gad2: (form.basic[2] ?? 0) + (form.basic[3] ?? 0),
