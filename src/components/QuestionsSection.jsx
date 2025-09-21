@@ -66,7 +66,7 @@ export default function QuestionsSection({
         {flag === "basic"
           ? "Preguntas iniciales"
           : `En base a sus respuestas a las preguntas iniciales, le proponemos continuar con las siguientes preguntas ${
-              currentSection === 3 && "(2/2)"
+              currentSection === 3 ? "(2/2)" : ""
             }`}
       </div>
       <div
