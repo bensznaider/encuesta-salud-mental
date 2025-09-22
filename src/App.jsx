@@ -37,11 +37,11 @@ export default function App() {
   }, [form.basic]);
 
   useEffect(() => {
-    // Unused variable, the goal is to force the browser to evaluate scrollY
+    // The goal is to force the browser to evaluate scrollY
     // to avoid some bug where scrollTo is ignored in some cases when
     // navigating between sections
-    let scrollYState = window.scrollY;
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const Y = window.scrollY;
+    window.scrollTo({ top: Y - Y, behavior: "smooth" });
   }, [currentSection]);
 
   return (
@@ -91,6 +91,7 @@ export default function App() {
           setForm={setForm}
           flag="basic"
           initialValues={[null, null, null, null]}
+          endsForm={!phq9Enabled && !gad7Enabled}
         />
       )}
       {currentSection === 2 &&
@@ -165,7 +166,7 @@ export default function App() {
           />
         ))}
       {currentSection === 3 &&
-        (gad7Enabled ? (
+        (gad7Enabled && phq9Enabled ? (
           <QuestionsSection
             questions={gad7}
             currentSection={currentSection}

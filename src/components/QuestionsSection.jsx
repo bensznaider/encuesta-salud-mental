@@ -65,7 +65,11 @@ export default function QuestionsSection({
         {flag === "basic"
           ? "Preguntas iniciales"
           : `En base a sus respuestas a las preguntas iniciales, le proponemos continuar con las siguientes preguntas ${
-              currentSection === 3 ? "(2/2)" : ""
+              currentSection === 2 && endsForm
+                ? ""
+                : currentSection === 3
+                ? "(2/2)"
+                : "(1/2)"
             }`}
       </div>
       <div
@@ -82,7 +86,7 @@ export default function QuestionsSection({
         </b>
         {", ¿con qué frecuencia le han molestado los siguientes problemas?"}
       </div>
-      {questions.map((question, index) => (
+      {questions.map((_, index) => (
         <RadioQuestionCard
           key={index}
           label={questions[index]}
