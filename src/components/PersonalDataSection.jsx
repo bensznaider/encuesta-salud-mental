@@ -39,9 +39,7 @@ export default function PersonalDataSection({
       <InputQuestionCard
         label="Teléfono"
         value={form.telefono}
-        onChange={(e) =>
-          setForm((f) => ({ ...f, telefono: e.target.value }))
-        }
+        onChange={(e) => setForm((f) => ({ ...f, telefono: e.target.value }))}
       />
 
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -50,7 +48,9 @@ export default function PersonalDataSection({
             continueEnabled ? "continue-button" : "continue-button--disabled"
           }
           disabled={!continueEnabled}
-          onClick={() => setCurrentSection((section) => section + 1)}
+          onClick={() => {
+            setCurrentSection((section) => section + 1);
+          }}
         >
           Siguiente
         </button>

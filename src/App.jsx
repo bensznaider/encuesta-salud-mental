@@ -36,6 +36,14 @@ export default function App() {
     });
   }, [form.basic]);
 
+  useEffect(() => {
+    // Unused variable, the goal is to force the browser to evaluate scrollY
+    // to avoid some bug where scrollTo is ignored in some cases when
+    // navigating between sections
+    let scrollYState = window.scrollY;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentSection]);
+
   return (
     <div style={{ padding: "0 10px" }}>
       <div style={{ marginBottom: "20px" }}>

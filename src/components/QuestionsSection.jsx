@@ -26,7 +26,6 @@ export default function QuestionsSection({
   const handleContinue = () => {
     if (!endsForm) {
       setCurrentSection((section) => section + 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       handleSubmit();
     }
@@ -85,6 +84,7 @@ export default function QuestionsSection({
       </div>
       {questions.map((question, index) => (
         <RadioQuestionCard
+          key={index}
           label={questions[index]}
           selected={form[flag][index]}
           fixedValue={
@@ -107,7 +107,6 @@ export default function QuestionsSection({
             className="continue-button"
             onClick={() => {
               setCurrentSection((section) => section - 1);
-              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
             Atrás
