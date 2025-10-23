@@ -1,12 +1,27 @@
-# React + Vite
+# Encuesta de Salud Mental / Mental Health Survey (React + Google Apps Script)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web survey app built with React.js (Vite) and Google Apps Script. Users complete an online mental health questionnaire and results are automatically stored in a Google Sheets database.
 
-Currently, two official plugins are available:
+## Features
+- Online questionnaire with client-side validation
+- Submission to Google Apps Script Web App endpoint
+- Automatic storage in Google Sheets
+- Lightweight, fast build with Vite
+- (Optional) Single-file build for easy embedding/deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React 19 (Vite)
+- Google Apps Script (Web App)
+- Google Sheets (data store)
 
-## Expanding the ESLint configuration
+## Prerequisites
+- Node.js (for running Vite locally)
+- A published Google Apps Script Web App pointing to a Google Sheet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup
+```bash
+git clone <repository-url>
+npm install
+npm run dev```
+
+The app will be available at http://localhost:5173
